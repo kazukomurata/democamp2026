@@ -1,0 +1,20 @@
+name: Tomoni
+type: theme
+description: 'A custom Drupal theme for accessible, people-friendly digital services.'
+core_version_requirement: ^11
+base theme: stable9
+
+libraries:
+  - tomoni/global
+  - core/normalize
+
+regions:
+  header_branding: 'Header branding'
+  header_actions: 'Header actions'
+  primary_menu: 'Primary menu'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  footer_branding: 'Footer branding'
+  footer_menu: 'Footer menu'
+  footer_bottom: 'Footer bottom'

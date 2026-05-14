@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Tomoni theme page template.
+ */
+#}
+<div class="l-page">
+
+  <header class="l-header" role="banner">
+    <div class="l-header__inner">
+      {% if page.header_branding %}
+        <div class="l-header__branding">
+          {{ page.header_branding }}
+        </div>
+      {% endif %}
+
+      {% if page.header_actions %}
+        <div class="l-header__actions">
+          {{ page.header_actions }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if page.primary_menu %}
+      <nav class="l-header__nav" aria-label="{{ 'Primary navigation'|t }}">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </header>
+
+  <div class="l-site-body">
+    {% if page.breadcrumb %}
+      <div class="l-breadcrumb">
+        {{ page.breadcrumb }}
+      </div>
+    {% endif %}
+
+    {% if page.highlighted %}
+      <div class="l-highlighted">
+        {{ page.highlighted }}
+      </div>
+    {% endif %}
+
+    <main id="main-content" class="l-main" role="main">
+      <div class="l-main__inner">
+        <div class="l-content">
+          {{ page.content }}
+        </div>
+      </div>
+    </main>
+
+    <footer class="l-footer" role="contentinfo">
+      <div class="l-footer__inner">
+        {% if page.footer_branding %}
+          <div class="l-footer__branding">
+            {{ page.footer_branding }}
+          </div>
+        {% endif %}
+
+        {% if page.footer_menu %}
+          <nav class="l-footer__nav" aria-label="{{ 'Footer navigation'|t }}">
+            {{ page.footer_menu }}
+          </nav>
+        {% endif %}
+
+        {% if page.footer_bottom %}
+          <div class="l-footer__bottom">
+            {{ page.footer_bottom }}
+          </div>
+        {% endif %}
+      </div>
+    </footer>
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+uuid: eee3c676-5913-4b20-8b9f-50da09c49301
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tomoni
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: tomoni_primary_admin_actions
+theme: tomoni
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

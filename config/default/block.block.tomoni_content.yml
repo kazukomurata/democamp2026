@@ -1,0 +1,22 @@
+uuid: c4d2a7f2-b70b-4235-a0db-6b4bea2a6f19
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tomoni
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: tomoni_content
+theme: tomoni
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

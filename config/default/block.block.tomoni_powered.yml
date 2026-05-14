@@ -1,0 +1,22 @@
+uuid: 974f95db-bf6a-4c65-ae68-eae59089779e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tomoni
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: tomoni_powered
+theme: tomoni
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

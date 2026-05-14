@@ -1,0 +1,22 @@
+uuid: af5ffc9c-371f-4b2c-b41d-190f3d7567d5
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - tomoni
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: tomoni_help
+theme: tomoni
+region: header_branding
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: f5b2bf0e-4edf-4b06-b066-e2f04a22d7ba
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - tomoni
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: tomoni_search_form_narrow
+theme: tomoni
+region: header_branding
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

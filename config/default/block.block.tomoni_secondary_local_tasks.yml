@@ -1,0 +1,22 @@
+uuid: b9e82f66-6622-46d1-90cc-b06f8d60efcd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tomoni
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: tomoni_secondary_local_tasks
+theme: tomoni
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

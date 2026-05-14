@@ -1,0 +1,20 @@
+uuid: 27b3d1ee-94fd-4b43-86ec-3daf0485f5f5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tomoni
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: tomoni_page_title
+theme: tomoni
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
