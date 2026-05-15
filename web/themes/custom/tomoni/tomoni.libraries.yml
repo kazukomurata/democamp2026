@@ -4,5 +4,6 @@ global:
     theme:
       assets/css/global.css: {}
       css/base.css: {}
+      css/typography.css: {}
       css/layout.css: {}
       css/components.css: {}

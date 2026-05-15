@@ -1,0 +1,135 @@
+body {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+h1,
+.page-title {
+  margin-block: 0 1em;
+  font-size: calc(36 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  margin-block: 2em 0.75em;
+  font-size: calc(32 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  margin-block: 1.75em 0.75em;
+  font-size: calc(28 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  margin-block: 1.5em 0.75em;
+  font-size: calc(24 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  margin-block: 1.5em 0.75em;
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+h6 {
+  margin-block: 1.5em 0.75em;
+  font-size: calc(18 / 16 * 1rem);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+table {
+  margin-block: 0 1.5em;
+}
+
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+blockquote:last-child,
+pre:last-child,
+table:last-child {
+  margin-block-end: 0;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.75em;
+}
+
+li + li {
+  margin-block-start: 0.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-inline-start: 1.75em;
+}
+
+blockquote {
+  margin-inline: 0;
+  padding-inline-start: 1.5em;
+  color: var(--color-neutral-solid-gray-800);
+  border-inline-start: 4px solid var(--color-neutral-solid-gray-200);
+}
+
+small,
+.text-small {
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-mono);
+}
+
+code,
+kbd,
+samp {
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: var(--color-neutral-solid-gray-50);
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+pre code {
+  font-size: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
