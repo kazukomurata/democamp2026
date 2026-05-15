@@ -8,3 +8,5 @@ weight: 0
 items:
   - sdc.olivero.teaser
   - sdc.tomoni.blockquote
+  - sdc.tomoni.media-card
+  - sdc.tomoni.text

@@ -1,0 +1,7 @@
+{% set text_attributes = (attributes ?? create_attribute()).addClass('tomoni-text') %}
+
+{% if text %}
+  <div{{ text_attributes }}>
+    {{ text|raw }}
+  </div>
+{% endif %}

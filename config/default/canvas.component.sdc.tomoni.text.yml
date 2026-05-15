@@ -1,0 +1,35 @@
+uuid: 52f54a8e-1f70-40f9-a1b3-7d2abedecf58
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - tomoni
+active_version: e5f41e5135c0a68b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>これはテキストコンポーネントの例です。</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions: {  }
+label: Text
+id: sdc.tomoni.text
+provider: tomoni
+source: sdc
+source_local_id: 'tomoni:text'

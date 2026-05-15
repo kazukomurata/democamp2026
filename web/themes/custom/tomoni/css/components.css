@@ -1,1 +1,3 @@
-/* Component-level Tomoni styles will be added here. */
+.l-content [data-component-id^="tomoni:"] + [data-component-id^="tomoni:"] {
+  margin-block-start: 2rem;
+}

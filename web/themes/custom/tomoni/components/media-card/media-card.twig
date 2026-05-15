@@ -1,0 +1,27 @@
+{% set card_attributes = (attributes ?? create_attribute()).addClass('tomoni-media-card') %}
+
+<article{{ card_attributes }}>
+  <div class="tomoni-media-card__inner">
+    {% if media %}
+      <a class="tomoni-media-card__media-link" href="{{ url }}" aria-label="{{ title }}">
+        {% include 'canvas:image' with media|merge({
+          loading: 'lazy',
+          sizes: 'auto 50vw',
+          class: 'tomoni-media-card__image',
+        }|filter((value) => value is not null)) only %}
+      </a>
+    {% endif %}
+
+    <div class="tomoni-media-card__body">
+      <h3 class="tomoni-media-card__title">
+        <a class="tomoni-media-card__title-link" href="{{ url }}">{{ title }}</a>
+      </h3>
+
+      {% if summary %}
+        <div class="tomoni-media-card__summary">
+          {{ summary|raw }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>

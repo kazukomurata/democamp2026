@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Media card
+description: A linked card with image, title, and optional summary.
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    title:
+      type: string
+      title: Title
+      examples:
+        - "第18回くらしの広場交流会"
+    summary:
+      type: string
+      title: Summary
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - "<p>住民の皆さまが参加できる地域緑化事業を行っています。</p>"
+    url:
+      type: string
+      title: URL
+      format: uri-reference
+      examples:
+        - "/events/living-plaza-18"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/sample.jpg"
+          width: 800
+          height: 600
+          alt: "Blue to green gradient placeholder image"
