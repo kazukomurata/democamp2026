@@ -1,0 +1,39 @@
+.tomoni-blockquote {
+  margin-block: 0 1.5em;
+  margin-inline: 0;
+  padding-block: calc(8 / 16 * 1rem);
+  padding-inline: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem);
+  color: var(--color-neutral-solid-gray-900);
+  border-inline-start: 8px solid var(--color-neutral-solid-gray-536);
+}
+
+.tomoni-blockquote__text {
+  margin-block: 0;
+}
+
+.tomoni-blockquote__attribution {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  align-items: baseline;
+  margin-block-start: 1rem;
+  color: var(--color-neutral-solid-gray-700);
+  font-size: calc(14 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+.tomoni-blockquote__cite {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tomoni-blockquote__cite-text::before {
+  content: "/";
+  margin-inline-end: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .tomoni-blockquote {
+    margin-inline: calc(40 / 16 * 1rem);
+  }
+}

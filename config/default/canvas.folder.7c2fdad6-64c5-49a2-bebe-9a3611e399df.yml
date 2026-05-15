@@ -1,9 +1,9 @@
-uuid: 0360e265-226a-47a2-b8c8-d9cf31ae7d0a
+uuid: 7c2fdad6-64c5-49a2-bebe-9a3611e399df
 langcode: en
 status: true
 dependencies: {  }
-name: Announcements
+name: Help
 configEntityTypeId: component
 weight: 0
 items:
-  - block.announce_block
+  - block.help_block

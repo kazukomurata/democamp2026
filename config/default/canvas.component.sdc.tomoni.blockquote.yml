@@ -1,0 +1,187 @@
+uuid: 9626cb31-d988-478f-ad71-48c5054a6450
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - link
+    - text
+  theme:
+    - tomoni
+active_version: 5783755bef8da5f9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>これは引用文の例です。</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        cite_name:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 著者名
+          expression: ℹ︎string␟value
+        cite_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 引用元
+          expression: ℹ︎string␟value
+        cite_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+  a269b56f052ca942:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        cite_name:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Isiah Julio'
+          expression: ℹ︎string␟value
+        cite_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Engineer, Technical Services'
+          expression: ℹ︎string␟value
+        cite_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+  be50e879cfd4358a:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: '“To confine our attention to terrestrial matters would be to limit the human spirit.”'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        cite_name:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Isiah Julio'
+          expression: ℹ︎string␟value
+        cite_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Engineer, Technical Services'
+          expression: ℹ︎string␟value
+        cite_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+  a9b8cac895bc904b:
+    settings:
+      prop_field_definitions:
+        cite_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'https://design.digital.go.jp/'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The quoted content. It can contain paragraphs, lists, or inline markup.'
+          examples:
+            - '<p>これは引用文の例です。</p>'
+        attribution:
+          title: Attribution
+          description: 'Optional visible source text for the quote.'
+          examples:
+            - デジタル庁デザインシステム
+label: Blockquote
+id: sdc.tomoni.blockquote
+provider: tomoni
+source: sdc
+source_local_id: 'tomoni:blockquote'

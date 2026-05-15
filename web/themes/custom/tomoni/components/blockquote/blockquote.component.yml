@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Blockquote
+description: A quote block for cited or emphasized quoted content.
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Rich text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>これは引用文の例です。</p>
+    cite_name:
+      type: string
+      title: Citation name
+      examples:
+        - "著者名"
+    cite_text:
+      type: string
+      title: Citation text
+      default: "引用元"
+      examples:
+        - "引用元"
+    cite_url:
+      type: string
+      title: Citation link
+      format: uri-reference

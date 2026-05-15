@@ -1,0 +1,10 @@
+uuid: 487d2791-177c-442f-8e05-16b685d015d1
+langcode: en
+status: true
+dependencies: {  }
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.olivero.teaser
+  - sdc.tomoni.blockquote

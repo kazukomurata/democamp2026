@@ -1,0 +1,28 @@
+{% set blockquote_attributes = (attributes ?? create_attribute()).addClass('tomoni-blockquote') %}
+{% if cite_url %}
+  {% set blockquote_attributes = blockquote_attributes.setAttribute('cite', cite_url) %}
+{% endif %}
+
+<blockquote{{ blockquote_attributes }}>
+  {% if text %}
+    <p class="tomoni-blockquote__text">{{ text }}</p>
+  {% endif %}
+
+  {% if cite_name or cite_text %}
+    <footer class="tomoni-blockquote__attribution">
+      {% if cite_name %}
+        <cite class="tomoni-blockquote__cite">
+          {% if cite_url %}
+            <a href="{{ cite_url }}">{{ cite_name }}</a>
+          {% else %}
+            {{ cite_name }}
+          {% endif %}
+        </cite>
+      {% endif %}
+
+      {% if cite_text %}
+        <span class="tomoni-blockquote__cite-text">{{ cite_text }}</span>
+      {% endif %}
+    </footer>
+  {% endif %}
+</blockquote>
