@@ -1,0 +1,15 @@
+.tomoni-grid {
+  display: grid;
+  gap: calc(24 / 16 * 1rem);
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .tomoni-grid--columns-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tomoni-grid--columns-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

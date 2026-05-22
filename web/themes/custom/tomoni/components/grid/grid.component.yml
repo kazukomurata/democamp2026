@@ -1,0 +1,24 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Grid
+group: Layout
+status: stable
+props:
+  type: object
+  required:
+    - columns
+  properties:
+    columns:
+      type: string
+      title: Columns
+      description: Columns.
+      enum:
+        - "2"
+        - "3"
+      examples:
+        - "2"
+      default:
+        - "2"
+
+slots:
+  main_slot:
+    title: "Grid"

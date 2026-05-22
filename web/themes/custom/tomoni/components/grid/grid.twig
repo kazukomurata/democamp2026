@@ -1,0 +1,10 @@
+{% set grid_columns = columns|default('2') %}
+{% set grid_attributes = (attributes ?? create_attribute()).addClass([
+  'tomoni-grid',
+  'tomoni-grid--columns-' ~ grid_columns,
+]) %}
+
+<div{{ grid_attributes }}>
+  {% block main_slot %}
+  {% endblock %}
+</div>
