@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Heading
+description: A simple heading component.
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Text
+      examples:
+        - これは見出しコンポーネントの例です。
+    level:
+      type: string
+      title: Heading level
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+      default: h2
+      examples:
+        - h2

@@ -1,0 +1,9 @@
+{% set heading_level = level in ['h1', 'h2', 'h3'] ? level : 'h2' %}
+{% set heading_attributes = (attributes ?? create_attribute()).addClass([
+  'tomoni-heading',
+  'tomoni-heading--' ~ heading_level,
+]) %}
+
+{% if text %}
+  <{{ heading_level }}{{ heading_attributes }}>{{ text }}</{{ heading_level }}>
+{% endif %}

@@ -18,13 +18,13 @@ props:
       contentMediaType: text/html
       x-formatting-context: block
       examples:
-        - "<p>住民の皆さまが参加できる地域緑化事業を行っています。</p>"
+        - "<p>概要が入力できます</p>"
     url:
       type: string
       title: URL
       format: uri-reference
       examples:
-        - "/events/living-plaza-18"
+        - "/sample"
     media:
       $ref: json-schema-definitions://canvas.module/image
       title: Image

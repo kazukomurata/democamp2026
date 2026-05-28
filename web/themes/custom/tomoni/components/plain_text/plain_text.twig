@@ -1,0 +1,5 @@
+{% set plain_text_attributes = (attributes ?? create_attribute()).addClass('tomoni-plain-text') %}
+
+{% if text %}
+  <p{{ plain_text_attributes }}>{{ text }}</p>
+{% endif %}
