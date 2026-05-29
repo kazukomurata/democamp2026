@@ -1,0 +1,31 @@
+{% set summary_id = summary_id|default('accordion-' ~ (title|default('item')|clean_id)) %}
+{% set heading_level = heading_level in ['h2', 'h3', 'h4', 'h5', 'h6'] ? heading_level : 'h3' %}
+{% set accordion_attributes = (attributes ?? create_attribute()).addClass('dads-accordion') %}
+{% if open %}
+  {% set accordion_attributes = accordion_attributes.setAttribute('open', 'open') %}
+{% endif %}
+
+<details{{ accordion_attributes }}>
+  <summary id="{{ summary_id }}" class="dads-accordion__summary">
+    <span class="dads-accordion__icon">
+      <svg class="dads-accordion__icon-svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.3 7.3L12 16L20.7 7.3" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </span>
+    <{{ heading_level }}>{{ title }}</{{ heading_level }}>
+  </summary>
+
+  <div class="dads-accordion__content">
+    {% block content %}
+    {% endblock %}
+
+{#    {% if show_back_link|default(true) %}#}
+{#      <a href="#{{ summary_id }}" class="dads-accordion__back-link">#}
+{#        <svg class="dads-accordion__back-link-icon" width="24" height="24" fill="none" aria-hidden="true">#}
+{#          <path d="M6 7V14.5C6 16.8 8.2 19 10.5 19C12.8 19 15 16.8 15 14.5V6M10.709 9.7L15 5.414L19.291 9.7" stroke="currentColor" stroke-width="2" />#}
+{#        </svg>#}
+{#        「{{ title }}」の先頭に戻る#}
+{#      </a>#}
+{#    {% endif %}#}
+  </div>
+</details>

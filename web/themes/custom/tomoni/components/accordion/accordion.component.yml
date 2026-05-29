@@ -1,0 +1,46 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion
+description: A details and summary based accordion component.
+props:
+  type: object
+  required:
+    - title
+  properties:
+    summary_id:
+      type: string
+      title: Summary ID
+      description: A unique ID for the summary element, used by the back link.
+      examples:
+        - accordion-1
+    title:
+      type: string
+      title: Title
+      examples:
+        - ダミーテキストとは何ですか？
+    heading_level:
+      type: string
+      title: Heading level
+      enum:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+      default: h3
+      examples:
+        - h3
+    open:
+      type: boolean
+      title: Open by default
+      default: false
+      examples:
+        - false
+#    show_back_link:
+#      type: boolean
+#      title: Show back link
+#      default: true
+#      examples:
+#        - true
+slots:
+  content:
+    title: Content
