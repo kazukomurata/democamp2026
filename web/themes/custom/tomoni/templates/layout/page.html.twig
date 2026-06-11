@@ -29,7 +29,6 @@
   </header>
 
   <div class="l-site-body">
-
     {% if page.highlighted %}
       <div class="l-highlighted">
         {{ page.highlighted }}
@@ -46,7 +45,9 @@
 
     {% if page.breadcrumb %}
       <div class="l-breadcrumb">
-        {{ page.breadcrumb }}
+        <div class="l-breadcrumb__inner">
+          {{ page.breadcrumb }}
+        </div>
       </div>
     {% endif %}
 

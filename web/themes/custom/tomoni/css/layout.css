@@ -74,6 +74,7 @@
   padding-block: 32px 64px;
 }
 
+.l-breadcrumb__inner,
 .l-main__inner,
 .l-footer__inner {
   width: min(100%, var(--tomoni-content-max-width));

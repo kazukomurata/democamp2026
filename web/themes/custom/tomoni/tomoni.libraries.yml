@@ -8,4 +8,5 @@ global:
       css/rich-text.css: {}
       css/layout.css: {}
       css/components.css: {}
+      css/components/breadcrumb.css: {}
       css/components/local-tasks.css: {}

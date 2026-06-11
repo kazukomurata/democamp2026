@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb %}
+  <nav class="tomoni-breadcrumb" aria-labelledby="tomoni-breadcrumb-label">
+    <h2 id="tomoni-breadcrumb-label" class="visually-hidden">{{ 'Current location'|t }}</h2>
+    <ol class="tomoni-breadcrumb__list">
+      {% for item in breadcrumb %}
+        <li class="tomoni-breadcrumb__item"{% if loop.last %} aria-current="page"{% endif %}>
+          {% if item.url and not loop.last %}
+            <a class="tomoni-breadcrumb__link" href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+
+          {% if not loop.last %}
+            <span class="tomoni-breadcrumb__separator" aria-hidden="true">
+              <svg class="tomoni-breadcrumb__separator-icon" width="12" height="12" viewBox="0 0 12 12" focusable="false">
+                <path d="M4.5 11L4 10.5L8 6.5L4 2.5L4.5 2L9 6.5L4.5 11Z" fill="currentColor"/>
+              </svg>
+            </span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}
