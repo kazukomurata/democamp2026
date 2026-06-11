@@ -1,0 +1,9 @@
+uuid: eb67dc99-91f0-47b8-b580-94fbf936063e
+langcode: en
+status: true
+dependencies: {  }
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.tomoni.grid

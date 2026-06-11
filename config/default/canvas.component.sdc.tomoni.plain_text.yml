@@ -1,0 +1,43 @@
+uuid: 782a546d-37b7-41cc-82ca-feac75a690ea
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tomoni
+active_version: 29c888f9f06af1b3
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: プレーンテキスト入力
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  cb1bb091f2a676e6:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: プレーンテキストが入力できます
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Plain text'
+id: sdc.tomoni.plain_text
+provider: tomoni
+source: sdc
+source_local_id: 'tomoni:plain_text'

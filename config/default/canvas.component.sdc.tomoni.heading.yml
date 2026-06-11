@@ -1,0 +1,41 @@
+uuid: a2726e36-e2fd-4584-8bc2-40e75509294b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - tomoni
+active_version: 865f60a38cdcb8a8
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: これは見出しコンポーネントの例です。
+          expression: ℹ︎string␟value
+        level:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: h2
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: Heading
+id: sdc.tomoni.heading
+provider: tomoni
+source: sdc
+source_local_id: 'tomoni:heading'
