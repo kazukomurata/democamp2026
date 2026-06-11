@@ -7,3 +7,4 @@ global:
       css/typography.css: {}
       css/layout.css: {}
       css/components.css: {}
+      css/components/local-tasks.css: {}
