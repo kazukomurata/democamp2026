@@ -29,11 +29,6 @@
   </header>
 
   <div class="l-site-body">
-    {% if page.breadcrumb %}
-      <div class="l-breadcrumb">
-        {{ page.breadcrumb }}
-      </div>
-    {% endif %}
 
     {% if page.highlighted %}
       <div class="l-highlighted">
@@ -48,6 +43,12 @@
         </div>
       </div>
     </main>
+
+    {% if page.breadcrumb %}
+      <div class="l-breadcrumb">
+        {{ page.breadcrumb }}
+      </div>
+    {% endif %}
 
     <footer class="l-footer" role="contentinfo">
       <div class="l-footer__inner">
