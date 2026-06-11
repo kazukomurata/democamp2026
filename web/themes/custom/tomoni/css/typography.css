@@ -53,50 +53,6 @@ h6 {
   letter-spacing: 0.02em;
 }
 
-p,
-ul,
-ol,
-dl,
-blockquote,
-pre,
-table {
-  margin-block: 0 1.5em;
-}
-
-p:last-child,
-ul:last-child,
-ol:last-child,
-dl:last-child,
-blockquote:last-child,
-pre:last-child,
-table:last-child {
-  margin-block-end: 0;
-}
-
-ul,
-ol {
-  padding-inline-start: 1.75em;
-}
-
-li + li {
-  margin-block-start: 0.5em;
-}
-
-dt {
-  font-weight: 700;
-}
-
-dd {
-  margin-inline-start: 1.75em;
-}
-
-blockquote {
-  margin-inline: 0;
-  padding-inline-start: 1.5em;
-  color: var(--color-neutral-solid-gray-800);
-  border-inline-start: 4px solid var(--color-neutral-solid-gray-200);
-}
-
 small,
 .text-small {
   font-size: calc(14 / 16 * 1rem);
@@ -105,8 +61,7 @@ small,
 
 code,
 kbd,
-samp,
-pre {
+samp {
   font-family: var(--font-family-mono);
 }
 
@@ -115,21 +70,4 @@ kbd,
 samp {
   font-size: calc(14 / 16 * 1rem);
   line-height: 1.5;
-}
-
-pre {
-  overflow-x: auto;
-  padding: 1rem;
-  background: var(--color-neutral-solid-gray-50);
-  font-size: calc(14 / 16 * 1rem);
-  line-height: 1.5;
-}
-
-pre code {
-  font-size: inherit;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
 }
