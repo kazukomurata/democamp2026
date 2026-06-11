@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks and preprocess functions for the Tomoni theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task.html.twig.
+ */
+function tomoni_preprocess_menu_local_task(array &$variables): void {
+  if (!isset($variables['link']['#options'])) {
+    return;
+  }
+
+  $variables['link']['#options']['attributes']['class'][] = 'tomoni-horizontal-menu__item-inner';
+
+  if (!empty($variables['is_active'])) {
+    $variables['link']['#options']['attributes']['aria-current'] = 'page';
+  }
+}

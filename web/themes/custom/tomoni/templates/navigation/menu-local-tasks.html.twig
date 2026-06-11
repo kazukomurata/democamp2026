@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ */
+#}
+{% if primary %}
+  <h2 id="tomoni-primary-tabs-title" class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <nav class="tomoni-tabs-wrapper" aria-labelledby="tomoni-primary-tabs-title">
+    <ul class="tomoni-horizontal-menu tomoni-horizontal-menu--primary">{{ primary }}</ul>
+  </nav>
+{% endif %}
+
+{% if secondary %}
+  <h2 id="tomoni-secondary-tabs-title" class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <nav class="tomoni-tabs-wrapper tomoni-tabs-wrapper--secondary" aria-labelledby="tomoni-secondary-tabs-title">
+    <ul class="tomoni-horizontal-menu tomoni-horizontal-menu--secondary">{{ secondary }}</ul>
+  </nav>
+{% endif %}
