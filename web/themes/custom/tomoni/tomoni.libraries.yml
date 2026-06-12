@@ -11,5 +11,11 @@ global:
       css/components/account-menu.css: {}
       css/components/breadcrumb.css: {}
       css/components/site-branding.css: {}
+      css/components/menu-toggle.css: {}
       css/components/main-menu.css: {}
       css/components/local-tasks.css: {}
+  js:
+    js/mobile-menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

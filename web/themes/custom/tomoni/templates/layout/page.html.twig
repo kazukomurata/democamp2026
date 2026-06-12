@@ -14,15 +14,24 @@
         </div>
       {% endif %}
 
-      {% if page.header_actions %}
+      {% if page.header_actions or page.primary_menu %}
         <div class="l-header__actions">
-          {{ page.header_actions }}
+          {% if page.header_actions %}
+            {{ page.header_actions }}
+          {% endif %}
+
+          {% if page.primary_menu %}
+            <button class="tomoni-menu-toggle" type="button" aria-controls="tomoni-mobile-menu" aria-expanded="false" data-tomoni-menu-toggle>
+              <span class="tomoni-menu-toggle__icon" aria-hidden="true"></span>
+              <span class="tomoni-menu-toggle__label" data-tomoni-menu-toggle-label>{{ 'Menu'|t }}</span>
+            </button>
+          {% endif %}
         </div>
       {% endif %}
     </div>
 
     {% if page.primary_menu %}
-      <nav class="l-header__nav" aria-label="{{ 'Primary navigation'|t }}">
+      <nav id="tomoni-mobile-menu" class="l-header__nav" aria-label="{{ 'Primary navigation'|t }}" data-tomoni-mobile-menu>
         {{ page.primary_menu }}
       </nav>
     {% endif %}
