@@ -10,5 +10,6 @@ global:
       css/components.css: {}
       css/components/account-menu.css: {}
       css/components/breadcrumb.css: {}
+      css/components/site-branding.css: {}
       css/components/main-menu.css: {}
       css/components/local-tasks.css: {}
