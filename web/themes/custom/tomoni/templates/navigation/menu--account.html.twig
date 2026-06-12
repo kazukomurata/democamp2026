@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display the user account menu.
+ */
+#}
+{% if items %}
+  <ul{{ attributes.addClass('tomoni-account-menu') }}>
+    {% for item in items %}
+      {% set is_current = item.in_active_trail %}
+      {% set item_classes = [
+        'tomoni-account-menu__item',
+        is_current ? 'tomoni-account-menu__item--current',
+      ] %}
+      {% set link_attributes = create_attribute(item.localized_options.attributes|default({}))
+        .addClass('tomoni-account-menu__link')
+      %}
+      {% if is_current %}
+        {% set link_attributes = link_attributes.setAttribute('aria-current', 'page') %}
+      {% endif %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a{{ link_attributes }} href="{{ item.url }}">
+          <span class="tomoni-account-menu__label">{{ item.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
