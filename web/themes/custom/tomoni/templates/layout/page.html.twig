@@ -31,6 +31,7 @@
     </div>
 
     {% if page.primary_menu %}
+      <button class="tomoni-mobile-menu-overlay" type="button" aria-label="{{ 'Close menu'|t }}" data-tomoni-mobile-menu-overlay hidden></button>
       <nav id="tomoni-mobile-menu" class="l-header__nav" aria-label="{{ 'Primary navigation'|t }}" data-tomoni-mobile-menu>
         {{ page.primary_menu }}
       </nav>

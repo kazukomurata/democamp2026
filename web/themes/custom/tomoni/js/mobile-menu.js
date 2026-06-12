@@ -6,19 +6,27 @@
         const menuId = toggle.getAttribute('aria-controls');
         const menu = menuId ? document.getElementById(menuId) : null;
         const label = toggle.querySelector('[data-tomoni-menu-toggle-label]');
+        const overlay = header ? header.querySelector('[data-tomoni-mobile-menu-overlay]') : null;
 
-        if (!header || !menu || !label) {
+        if (!header || !menu || !label || !overlay) {
           return;
         }
 
         const setExpanded = (expanded) => {
           header.classList.toggle('is-mobile-menu-open', expanded);
+          document.documentElement.classList.toggle('is-tomoni-mobile-menu-open', expanded);
           toggle.setAttribute('aria-expanded', String(expanded));
+          overlay.hidden = !expanded;
           label.textContent = expanded ? Drupal.t('Close') : Drupal.t('Menu');
         };
 
         toggle.addEventListener('click', () => {
           setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+
+        overlay.addEventListener('click', () => {
+          setExpanded(false);
+          toggle.focus();
         });
 
         document.addEventListener('keydown', (event) => {
