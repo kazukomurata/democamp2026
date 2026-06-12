@@ -28,7 +28,9 @@
   gap: 16px;
   align-items: center;
   padding: 12px var(--tomoni-page-gutter);
-  background: var(--color-neutral-white);
+  border-bottom: 1px solid var(--color-neutral-solid-gray-200);
+  /*background: var(--color-neutral-solid-gray-50);*/
+  box-shadow: 0 2px 8px var(--color-neutral-opacity-gray-50);
 }
 
 .l-header__inner {
@@ -53,6 +55,7 @@
 
 .l-site-body {
   min-width: 0;
+  background: var(--color-neutral-white);
 }
 
 .l-breadcrumb,
@@ -170,6 +173,9 @@
     align-content: start;
     gap: 24px;
     padding: 32px;
+    border-right: 1px solid var(--color-neutral-solid-gray-200);
+    border-bottom: 0;
+    box-shadow: none;
     overflow-y: auto;
   }
 

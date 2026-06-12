@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override to display the main menu.
+ */
+#}
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% set list_classes = [
+      'tomoni-main-menu',
+      menu_level > 0 ? 'tomoni-main-menu--sub',
+      menu_level > 0 ? 'tomoni-main-menu--level-' ~ menu_level,
+    ] %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(list_classes) }}>
+    {% else %}
+      <ul class="{{ list_classes|join(' ') }}">
+    {% endif %}
+    {% for item in items %}
+      {% set has_active_child = item.below|filter(child => child.in_active_trail)|length > 0 %}
+      {% set is_current = item.in_active_trail and not has_active_child %}
+      {% set item_classes = [
+        'tomoni-main-menu__list-item',
+        item.is_expanded ? 'tomoni-main-menu__list-item--expanded',
+        item.is_collapsed ? 'tomoni-main-menu__list-item--collapsed',
+        item.in_active_trail ? 'tomoni-main-menu__list-item--active-trail',
+      ] %}
+      {% set link_attributes = create_attribute(item.localized_options.attributes|default({}))
+        .addClass('tomoni-main-menu__item')
+        .setAttribute('data-type', 'standard')
+        .setAttribute('data-size', 'regular')
+      %}
+      {% if item.in_active_trail %}
+        {% set link_attributes = link_attributes.setAttribute(is_current ? 'data-current' : 'data-active-trail', '') %}
+      {% endif %}
+      {% if is_current %}
+        {% set link_attributes = link_attributes.setAttribute('aria-current', 'page') %}
+      {% endif %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a{{ link_attributes }} href="{{ item.url }}">
+          <span class="tomoni-main-menu__label">{{ item.title }}</span>
+        </a>
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -9,4 +9,5 @@ global:
       css/layout.css: {}
       css/components.css: {}
       css/components/breadcrumb.css: {}
+      css/components/main-menu.css: {}
       css/components/local-tasks.css: {}
