@@ -1,0 +1,55 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero
+description: A page hero with heading, body text, optional image, and call to action link.
+status: 'obsolete'
+props:
+  type: object
+  required:
+    - title
+  properties:
+    eyebrow:
+      type: string
+      title: Eyebrow
+      examples:
+        - くらしの広場
+    title:
+      type: string
+      title: Title
+      examples:
+        - 地域でつながり、ともに支え合う
+    text:
+      type: string
+      title: Text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>身近な相談や交流のきっかけをつくり、安心して暮らせる地域を目指します。</p>
+    link_text:
+      type: string
+      title: Link text
+      examples:
+        - 活動を見る
+    link_url:
+      type: string
+      title: Link URL
+      format: uri-reference
+      examples:
+        - /activities
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: ../media-card/assets/sample.jpg
+          width: 800
+          height: 600
+          alt: Blue to green gradient placeholder image
+    image_position:
+      type: string
+      title: Image position
+      enum:
+        - right
+        - left
+      default: right
+      examples:
+        - right

@@ -1,0 +1,62 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: CTA
+description: A call to action block with heading, text, and a link button.
+props:
+  type: object
+  required:
+    - title
+    - link_text
+    - link_url
+  properties:
+    title:
+      type: string
+      title: Title
+      examples:
+        - ともに活動しませんか？
+    text:
+      type: string
+      title: Text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>イベント参加やボランティアについて、お気軽にお問い合わせください。</p>
+    link_text:
+      type: string
+      title: Link text
+      examples:
+        - お問い合わせ
+    link_url:
+      type: string
+      title: Link URL
+      format: uri-reference
+      examples:
+        - /contact
+    style:
+      type: string
+      title: Style
+      enum:
+        - solid-fill
+        - outline
+        - text
+      default: solid-fill
+      examples:
+        - solid-fill
+    size:
+      type: string
+      title: Size
+      enum:
+        - lg
+        - md
+        - sm
+      default: md
+      examples:
+        - md
+    alignment:
+      type: string
+      title: Alignment
+      enum:
+        - left
+        - center
+      default: left
+      examples:
+        - left

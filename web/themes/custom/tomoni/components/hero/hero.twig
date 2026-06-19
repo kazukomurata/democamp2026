@@ -1,0 +1,39 @@
+{% set hero_image_position = image_position in ['right', 'left'] ? image_position : 'right' %}
+{% set hero_link_text = link_text|default('詳しく見る') %}
+{% set hero_attributes = (attributes ?? create_attribute()).addClass([
+  'tomoni-hero',
+  'tomoni-hero--image-' ~ hero_image_position,
+  media ? 'tomoni-hero--has-media' : 'tomoni-hero--no-media',
+]) %}
+
+<section{{ hero_attributes }}>
+  <div class="tomoni-hero__content">
+    {% if eyebrow %}
+      <p class="tomoni-hero__eyebrow">{{ eyebrow }}</p>
+    {% endif %}
+
+    {% if title %}
+      <h1 class="tomoni-hero__title">{{ title }}</h1>
+    {% endif %}
+
+    {% if text %}
+      <div class="tomoni-hero__text">
+        {{ text|raw }}
+      </div>
+    {% endif %}
+
+    {% if link_url %}
+      <a class="tomoni-hero__link" href="{{ link_url }}"><span>{{ hero_link_text }}</span></a>
+    {% endif %}
+  </div>
+
+  {% if media %}
+    <div class="tomoni-hero__media">
+      {% include 'canvas:image' with media|merge({
+        loading: 'eager',
+        sizes: 'auto 50vw',
+        class: 'tomoni-hero__image',
+      }|filter((value) => value is not null)) only %}
+    </div>
+  {% endif %}
+</section>
