@@ -1,0 +1,11 @@
+{% set image_attributes = (attributes ?? create_attribute()).addClass('tomoni-media-image') %}
+
+{% if media %}
+  <div{{ image_attributes }}>
+    {% include 'canvas:image' with media|merge({
+      loading: 'lazy',
+      sizes: 'auto 100vw',
+      class: 'tomoni-media-image__image',
+    }|filter((value) => value is not null)) only %}
+  </div>
+{% endif %}

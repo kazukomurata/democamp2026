@@ -1,11 +1,10 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Media card
-description: A linked card with image, title, and optional summary.
+description: A card with image, title, optional summary, and optional link.
 props:
   type: object
   required:
     - title
-    - url
   properties:
     title:
       type: string
@@ -22,6 +21,7 @@ props:
     url:
       type: string
       title: URL
+      description: Optional link URL for the image and title.
       format: uri-reference
       examples:
         - "/sample"

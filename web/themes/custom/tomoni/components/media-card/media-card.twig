@@ -3,18 +3,32 @@
 <article{{ card_attributes }}>
   <div class="tomoni-media-card__inner">
     {% if media %}
-      <a class="tomoni-media-card__media-link" href="{{ url }}" aria-label="{{ title }}">
-        {% include 'canvas:image' with media|merge({
-          loading: 'lazy',
-          sizes: 'auto 50vw',
-          class: 'tomoni-media-card__image',
-        }|filter((value) => value is not null)) only %}
-      </a>
+      {% if url %}
+        <a class="tomoni-media-card__media tomoni-media-card__media-link" href="{{ url }}" aria-label="{{ title }}">
+          {% include 'canvas:image' with media|merge({
+            loading: 'lazy',
+            sizes: 'auto 50vw',
+            class: 'tomoni-media-card__image',
+          }|filter((value) => value is not null)) only %}
+        </a>
+      {% else %}
+        <div class="tomoni-media-card__media">
+          {% include 'canvas:image' with media|merge({
+            loading: 'lazy',
+            sizes: 'auto 50vw',
+            class: 'tomoni-media-card__image',
+          }|filter((value) => value is not null)) only %}
+        </div>
+      {% endif %}
     {% endif %}
 
     <div class="tomoni-media-card__body">
       <h3 class="tomoni-media-card__title">
-        <a class="tomoni-media-card__title-link" href="{{ url }}">{{ title }}</a>
+        {% if url %}
+          <a class="tomoni-media-card__title-link" href="{{ url }}">{{ title }}</a>
+        {% else %}
+          {{ title }}
+        {% endif %}
       </h3>
 
       {% if summary %}

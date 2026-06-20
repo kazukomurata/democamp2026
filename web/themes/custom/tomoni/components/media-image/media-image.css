@@ -1,0 +1,9 @@
+.tomoni-media-image {
+  display: block;
+}
+
+.tomoni-media-image__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
