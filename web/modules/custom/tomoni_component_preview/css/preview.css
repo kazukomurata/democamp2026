@@ -1,0 +1,39 @@
+.tomoni-component-preview {
+  display: grid;
+  gap: 48px;
+  margin-block: 32px 64px;
+}
+
+.tomoni-component-preview__header {
+  display: grid;
+  gap: 8px;
+}
+
+.tomoni-component-preview__title {
+  margin: 0;
+}
+
+.tomoni-component-preview__description {
+  max-width: 72ch;
+  margin: 0;
+}
+
+.tomoni-component-preview__section {
+  display: grid;
+  gap: 16px;
+  padding-block-start: 32px;
+  border-block-start: 1px solid currentColor;
+}
+
+.tomoni-component-preview__section-title {
+  margin: 0;
+}
+
+.tomoni-component-preview__example {
+  display: grid;
+  gap: 16px;
+}
+
+.tomoni-component-preview__grid-item {
+  min-width: 0;
+}

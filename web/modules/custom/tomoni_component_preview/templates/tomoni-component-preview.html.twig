@@ -1,0 +1,166 @@
+{#
+/**
+ * @file
+ * Preview page for Tomoni components.
+ *
+ * Add new component examples here when components are added under
+ * web/themes/custom/tomoni/components.
+ */
+#}
+
+<div class="tomoni-component-preview">
+  <header class="tomoni-component-preview__header">
+{#    <h1 class="tomoni-component-preview__title">{{ 'Tomoni components'|t }}</h1>#}
+    <p class="tomoni-component-preview__description">
+      {{ 'This administrator-only page renders sample usages of components from web/themes/custom/tomoni/components.'|t }}
+    </p>
+  </header>
+
+{#  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-hero">#}
+{#    <h2 id="tomoni-component-preview-heading-hero" class="tomoni-component-preview__section-title">Hero</h2>#}
+{#    <div class="tomoni-component-preview__example">#}
+{#      {% include 'tomoni:hero' with {#}
+{#        eyebrow: 'くらしの広場',#}
+{#        title: '地域でつながり、ともに支え合う',#}
+{#        text: '<p>身近な相談や交流のきっかけをつくり、安心して暮らせる地域を目指します。</p>',#}
+{#        link_text: '活動を見る',#}
+{#        link_url: '/activities',#}
+{#        media: sample_image,#}
+{#        image_position: 'right',#}
+{#      } only %}#}
+{#    </div>#}
+{#  </section>#}
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-heading">
+    <h2 id="tomoni-component-preview-heading-heading" class="tomoni-component-preview__section-title">Heading</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:heading' with {
+        level: 'h2',
+        text: '活動のお知らせ',
+      } only %}
+      {% include 'tomoni:heading' with {
+        level: 'h3',
+        text: '相談できる場所',
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-text">
+    <h2 id="tomoni-component-preview-heading-text" class="tomoni-component-preview__section-title">Text</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:text' with {
+        text: '<p>本文を表示するためのリッチテキストコンポーネントです。段落やリンクなどを含む HTML を渡せます。</p><p><a href="/sample">サンプルリンク</a></p>',
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-plain-text">
+    <h2 id="tomoni-component-preview-heading-plain-text" class="tomoni-component-preview__section-title">Plain text</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:plain_text' with {
+        text: '短いプレーンテキストを表示します。',
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-blockquote">
+    <h2 id="tomoni-component-preview-heading-blockquote" class="tomoni-component-preview__section-title">Blockquote</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:blockquote' with {
+        text: '地域の中で声をかけ合える関係づくりを大切にしています。',
+        cite_name: 'Tomoni',
+        cite_text: '活動紹介',
+        cite_url: '/about',
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-cta">
+    <h2 id="tomoni-component-preview-heading-cta" class="tomoni-component-preview__section-title">CTA</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:cta' with {
+        title: '活動に参加しませんか',
+        text: '<p>見学や相談はいつでも受け付けています。</p>',
+        link_text: '問い合わせる',
+        link_url: '/contact',
+        style: 'solid-fill',
+        size: 'md',
+        alignment: 'left',
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-media-image">
+    <h2 id="tomoni-component-preview-heading-media-image" class="tomoni-component-preview__section-title">Media image</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:media-image' with {
+        media: sample_image,
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-media-card">
+    <h2 id="tomoni-component-preview-heading-media-card" class="tomoni-component-preview__section-title">Media card</h2>
+    <div class="tomoni-component-preview__example">
+      {% include 'tomoni:media-card' with {
+        title: '第18回くらしの広場交流会',
+        summary: '<p>地域の方が集まって情報交換をする交流会です。</p>',
+        url: '/sample',
+        media: sample_image,
+      } only %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-accordion">
+    <h2 id="tomoni-component-preview-heading-accordion" class="tomoni-component-preview__section-title">Accordion</h2>
+    <div class="tomoni-component-preview__example">
+      {% embed 'tomoni:accordion' with {
+        summary_id: 'tomoni-component-preview-accordion-1',
+        title: 'ダミーテキストとは何ですか？',
+        heading_level: 'h3',
+        open: true,
+      } only %}
+        {% block content %}
+          <p>アコーディオン内に表示する本文のサンプルです。説明文や補足情報を配置できます。</p>
+        {% endblock %}
+      {% endembed %}
+    </div>
+  </section>
+
+  <section class="tomoni-component-preview__section" aria-labelledby="tomoni-component-preview-heading-grid">
+    <h2 id="tomoni-component-preview-heading-grid" class="tomoni-component-preview__section-title">Grid</h2>
+    <div class="tomoni-component-preview__example">
+      {% embed 'tomoni:grid' with {
+        columns: '3',
+        sample_image: sample_image,
+      } only %}
+        {% block main_slot %}
+          <div class="tomoni-component-preview__grid-item">
+            {% include 'tomoni:media-card' with {
+              title: '地域相談',
+              summary: '<p>暮らしの中の困りごとを相談できます。</p>',
+              url: '/sample',
+              media: sample_image,
+            } only %}
+          </div>
+          <div class="tomoni-component-preview__grid-item">
+            {% include 'tomoni:media-card' with {
+              title: '交流会',
+              summary: '<p>地域の方が集まる定期的な場です。</p>',
+              url: '/sample',
+              media: sample_image,
+            } only %}
+          </div>
+          <div class="tomoni-component-preview__grid-item">
+            {% include 'tomoni:media-card' with {
+              title: 'お知らせ',
+              summary: '<p>活動予定や最新情報を掲載します。</p>',
+              url: '/sample',
+              media: sample_image,
+            } only %}
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+  </section>
+</div>

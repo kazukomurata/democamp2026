@@ -1,0 +1,7 @@
+tomoni_component_preview.overview:
+  path: '/tomoni/components'
+  defaults:
+    _controller: '\Drupal\tomoni_component_preview\Controller\ComponentPreviewController::overview'
+    _title: 'Tomoni components'
+  requirements:
+    _permission: 'administer themes'

@@ -1,0 +1,7 @@
+name: Tomoni Component Preview
+type: module
+description: Provides an administrator-only preview page for Tomoni theme components.
+package: Tomoni
+core_version_requirement: ^11
+dependencies:
+  - canvas:canvas
