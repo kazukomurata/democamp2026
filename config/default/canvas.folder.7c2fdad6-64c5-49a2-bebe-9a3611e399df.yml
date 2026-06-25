@@ -1,7 +1,9 @@
 uuid: 7c2fdad6-64c5-49a2-bebe-9a3611e399df
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.help_block
 name: Help
 configEntityTypeId: component
 weight: 0

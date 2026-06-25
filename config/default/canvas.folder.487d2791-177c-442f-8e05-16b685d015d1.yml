@@ -1,7 +1,18 @@
 uuid: 487d2791-177c-442f-8e05-16b685d015d1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.sdc.olivero.teaser
+    - canvas.component.sdc.tomoni.accordion
+    - canvas.component.sdc.tomoni.blockquote
+    - canvas.component.sdc.tomoni.cta
+    - canvas.component.sdc.tomoni.heading
+    - canvas.component.sdc.tomoni.hero
+    - canvas.component.sdc.tomoni.media-card
+    - canvas.component.sdc.tomoni.media-image
+    - canvas.component.sdc.tomoni.plain_text
+    - canvas.component.sdc.tomoni.text
 name: Other
 configEntityTypeId: component
 weight: 0
@@ -9,7 +20,10 @@ items:
   - sdc.olivero.teaser
   - sdc.tomoni.accordion
   - sdc.tomoni.blockquote
+  - sdc.tomoni.cta
   - sdc.tomoni.heading
+  - sdc.tomoni.hero
   - sdc.tomoni.media-card
+  - sdc.tomoni.media-image
   - sdc.tomoni.plain_text
   - sdc.tomoni.text

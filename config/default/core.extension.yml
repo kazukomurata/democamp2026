@@ -40,6 +40,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  tomoni_component_preview: 0
   toolbar: 0
   user: 0
   views_ui: 0

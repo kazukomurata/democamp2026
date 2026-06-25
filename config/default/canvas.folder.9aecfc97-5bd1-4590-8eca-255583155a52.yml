@@ -1,7 +1,10 @@
 uuid: 9aecfc97-5bd1-4590-8eca-255583155a52
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.search_form_block
+    - canvas.component.block.user_login_block
 name: Forms
 configEntityTypeId: component
 weight: 0

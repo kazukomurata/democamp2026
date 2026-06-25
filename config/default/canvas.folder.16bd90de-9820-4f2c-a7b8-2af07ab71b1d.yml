@@ -1,7 +1,14 @@
 uuid: 16bd90de-9820-4f2c-a7b8-2af07ab71b1d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - canvas.component.block.shortcuts
+    - canvas.component.block.system_menu_block.account
+    - canvas.component.block.system_menu_block.admin
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.block.system_menu_block.tools
 name: Menus
 configEntityTypeId: component
 weight: 0
